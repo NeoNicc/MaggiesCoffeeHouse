@@ -1,0 +1,18 @@
+html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5% 0 5%;
+}
+
+#navLogo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 10px;
+}
