@@ -18,6 +18,9 @@ body {
     margin: 0;
     background-color: var(--mediumTan)
 }
+hr {
+    margin: 0 10%;
+}
 
 .bubble {
     display: flex;
@@ -46,7 +49,7 @@ body {
 }
 #secondBubble {
     position: absolute;
-    top: 35%;
+    top: 33%;
 }
 
 .headerContent {
@@ -79,13 +82,14 @@ nav {
     padding: 10px 16px;
     background-color: var(--blackCoffee);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
+    border-radius: 8px 0 8px 8px;
     justify-content: center;
     align-items: center;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease-in-out;
+    z-index: 3;
 }
 .navLinks li {
     width: 100%;
@@ -139,7 +143,7 @@ nav {
     opacity: 0;
     width: 40px;
     height: 40px;
-    z-index: 2;
+    z-index: 5;
     top: 6%;
     right: 4%;
     cursor: pointer;
@@ -158,8 +162,77 @@ nav {
     height: auto;
     border-radius: 10px;
     z-index: -1;
+    margin-bottom: 60px;
 }
 
+.cardWindow {
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.cardWrapper {
+    display: flex;
+    width: 900pxx;
+    animation: slideShow 9s ease-in-out infinite;
+}
+.card {
+    width: 300px;
+    height: 350px;
+    flex-shrink: 0;
+}
+.card:hover {
+    animation-play-state: paused;
+}
+.card:active {
+    animation-play-state: paused;
+}
+.cardImage {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+}
+@keyframes slideShow {
+    0%, 30% { transform: translateX(0); }
+    35%, 65% { transform: translateX(-300px); }
+    70%, 95% { transform: translateX(-600px); }
+}
+.slideDotContainer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.slideShowDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--mediumTan);
+}
+#dot1 {
+    animation: dot1Tracker 9s ease-in-out infinite;
+}
+@keyframes dot1Tracker {
+    0%, 30% { background-color: var(--blackCoffee); }
+    35%, 65% { background-color: var(--mediumTan); }
+    70%, 95% { background-color: var(--mediumTan); }
+}
+#dot2 {
+    animation: dot2Tracker 9s ease-in-out infinite;
+}
+@keyframes dot2Tracker {
+    0%, 30% { background-color: var(--mediumTan); }
+    35%, 65% { background-color: var(--blackCoffee); }
+    70%, 95% { background-color: var(--mediumTan); }
+}
+#dot3 {
+    animation: dot3Tracker 9s ease-in-out infinite;
+}
+@keyframes dot3Tracker {
+    0%, 30% { background-color: var(--mediumTan); }
+    35%, 65% { background-color: var(--mediumTan); }
+    70%, 95% { background-color: var(--blackCoffee); }
+}
 
 #menu {
     display: none;
