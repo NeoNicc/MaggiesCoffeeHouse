@@ -20,12 +20,35 @@ body {
 }
 
 .bubble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     background-color: var(--bubbleWhite);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;
     margin: 4% 5% 0 5%;
 }
+.bubbleTitle {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+}
+.bubbleText {
+    padding: 0;
+    margin: 0;
+}
+#firstBubble {
+    position: absolute;
+    top: 16%;
+}
+#secondBubble {
+    position: absolute;
+    top: 35%;
+}
+
 .headerContent {
     display: flex;
     background-color: var(--blackCoffee);
@@ -50,7 +73,7 @@ nav {
     top: 13%;
     right: 2%;
     list-style: none;
-    display: none; /*-flex hidden on mobile -flex on desktop */
+    display: flex; /*-flex hidden on mobile -flex on desktop */
     flex-direction: column;
     gap: 20px;
     padding: 10px 16px;
@@ -59,6 +82,10 @@ nav {
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
 }
 .navLinks li {
     width: 100%;
@@ -118,5 +145,28 @@ nav {
     cursor: pointer;
 }
 #menuToggle:checked ~ .navLinks {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.homeImage {
+    position: sticky;
+    top: 16%;
+    opacity: 0.8;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+#menu {
+    display: none;
+}
+#events {
+    display: none;
+}
+#contact {
+    display: none;
 }
