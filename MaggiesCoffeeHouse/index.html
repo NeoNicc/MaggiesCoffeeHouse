@@ -29,6 +29,20 @@
             <a href="index.html"><img src="assets/images/MaggiesLogo.svg" alt="Maggies Coffee House Logo" id="navLogo" class="logo"></a>
 
             <h1 class="businessName">Maggies Coffee House</h1>
+            
+            <div id="fbLink">
+                <a href="https://www.facebook.com/maggiescoffeehouse" 
+                class="fbBubble" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Find Maggie's Coffee House on Facebook">
+                    <svg class="fbLogo" viewBox="0 0 24 24" fill="#1877f2" width="18" height="18">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                Prefer Facebook?
+                <span class="backgroundForLogo"></span>
+                </a>
+            </div>
 
             <input type="checkbox" id="menuToggle">
             <label for="menuToggle" class="menuIcon">
@@ -48,15 +62,16 @@
     <main>
         <section id="homeSection">
             <img src="assets/images/MaggiesBanner.jpeg" alt="Interior of Maggie's Coffee House" class="homeImage">
-            <div class="bubble" id="firstBubble">
+            <div class="bubble" id="firstBubble">           <!--first bubble-->
                 <h2 class="bubbleTitle">Welcome to Luverne's Coziest Cafe</h2>
+                <button class="orderNowButton" href="menu.html">Order Now</button>
             </div>
             
-            <div class="bubble" id="secondBubble">
+            <div class="bubble" id="secondBubble">          <!--second bubble-->
                 <p class="bubbleText">Located in downtown Luverne, Alabama, Maggie's Coffee House offers fresh espresso, breakfast, lunch, pastries, smoothies and more! We are committed to providing a cozy atmosphere and delicious food and drinks for our community.</p>
             </div>
 
-            <div class="bubble" id="cardContainer">
+            <div class="bubble" id="cardContainer">         <!--third bubble-->
                 <div class="cardWindow">
                     <h2 class="cardWindowTitle">Specials</h2>
                     <div class="cardWrapper">
@@ -87,7 +102,7 @@
                 </div>
             </div>
 
-            <div id="menu" class="bubble">
+            <div id="menu" class="bubble">                  <!--fourth bubble-->
                 <h2 class="bubbleTitle">Our Menu</h2>
                 <p class="bubbleText">Explore our diverse menu featuring everything from classic espresso drinks to hearty breakfast sandwiches and fresh salads. We use high-quality ingredients to ensure every bite and sip is a delight.</p>
                 <button class="linkButton" id="menuButton" href="menu.html">To Menu</button>
@@ -107,28 +122,35 @@
     <footer>
         <div class="footerContainer">
             <div class="footerBrand">
-                <img src="assets/images/MaggiesLogo.svg" alt="Maggie's Coffee House Logo">
-                <p>Committed to the community of Luverne.</p>
+                <img src="assets/images/MaggiesLogo.svg" alt="Maggie's Coffee House Logo" class="footerLogo">
+                <p class="bubbleTitle">Committed to the community of Luverne.</p>
             </div>
+            <div class="textSeparator">
+                <div id="contactAndHours">
+                    <div class="footerContact">
+                        <h3>Visit Us: </h3>
+                        <address>
+                            <p>81 Forest Ave<br>Luverne, AL 36049</p>
+                            <p><a href="tel:3345352498">(334) 535-2498</a></p>
+                        </address>
+                    </div>
 
-            <div class="footerContact">
-                <h3>Visit Us</h3>
-                <address>
-                    <p>81 Forest Ave<br>Luverne, AL 36049</p>
-                    <p><a href="tel:3345352498">(334) 535-2498</a></p>
-                </address>
+                    <div class="footerHours">
+                        <h3>Hours:</h3>
+                        <div class="hoursSeparator">
+                            <p>Mon - Fri: 6:30am - 4:30pm</p>
+                            <p>Sat: 8am - 12pm</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footerBottom">
+                    <p>
+                        &copy; 2024 Maggie's Coffee House. All rights reserved.
+                    </p>
+                </div>
             </div>
-
-            <div class="footerHours">
-                <h3>Our Hours</h3>
-                <p>Mon - Fri: 7am - 4pm</p>
-                <p>Sat: 8am - 2pm</p>
-                <p>Sun: Closed</p>
-            </div>
-        </div>
-
-        <div class="footerBottom">
-            <p>&copy; 2024 Maggie's Coffee House. All rights reserved.</p>
         </div>
     </footer>
 </body>
