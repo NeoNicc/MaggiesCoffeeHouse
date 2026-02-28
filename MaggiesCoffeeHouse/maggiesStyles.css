@@ -32,39 +32,53 @@ hr {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;
-    margin: 4% 5% 0 5%;
+    margin: 0 5% 0 5%;
 }
 .bubbleTitle {
     padding: 0;
-    margin: 0;
+    margin: 4px 0;
     font-size: 1.5em;
 }
 .bubbleText {
     padding: 0;
-    margin: 0;
+    margin: 2px 0;
 }
 #firstBubble {
     position: absolute;
-    top: 16%;
+    top: 20%;
+    animation: slideDown 0.6s ease-in forwards;
 }
 #secondBubble {
+    opacity: 0;
     position: absolute;
-    top: 33%;
+    top: 37%;
+    animation: slideDown 1s ease-in forwards;
+    animation-delay: 0.2s;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .headerContent {
     display: flex;
     background-color: var(--blackCoffee);
     color: var(--bubbleWhite);
-    height: 100px;
+    height: 120px;
     border-radius: 0 0 10px 10px;
 }
 .businessName {
     position: absolute;
-    top: 2%;
-    left: 12%;
+    top: 4%;
+    left: 9%;
     font-family: "Style Script", cursive;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 nav {
     display: flex;
@@ -162,15 +176,35 @@ nav {
     height: auto;
     border-radius: 10px;
     z-index: -1;
-    margin-bottom: 60px;
 }
 
+#cardContainer {
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
 .cardWindow {
     width: 300px;
-    height: 350px;
+    height: 400px;
     overflow: hidden;
     border-radius: 10px;
     margin: 0 auto;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+}
+.cardWindowTitle {
+    font-family: "Style Script", cursive;
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0 0 2px 0;
 }
 .cardWrapper {
     display: flex;
@@ -179,7 +213,7 @@ nav {
 }
 .card {
     width: 300px;
-    height: 350px;
+    height: 400px;
     flex-shrink: 0;
 }
 .card:hover {
@@ -192,6 +226,7 @@ nav {
     width: 200px;
     height: 180px;
     object-fit: cover;
+    margin: 0 0 4px 0;
 }
 @keyframes slideShow {
     0%, 30% { transform: translateX(0); }
@@ -234,9 +269,18 @@ nav {
     70%, 95% { background-color: var(--blackCoffee); }
 }
 
-#menu {
-    display: none;
+#menuButton {
+    width: 100px;
+    height: 36px;
+    background-color: var(--blackCoffee);
+    color: var(--bubbleWhite);
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 10px 0 0 0;
 }
+
 #events {
     display: none;
 }
