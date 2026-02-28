@@ -1,3 +1,11 @@
+:root {
+    --mediumTan: #FDeBD6;
+    --lightTan: #fDF5EA;
+    --bubbleWhite: #f9f9ff;
+    --blackCoffee: #150703;
+    --lessBlackCoffee: #232b24fe;
+}
+
 html {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,12 +15,108 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    margin: 0 5% 0 5%;
+    margin: 0;
+    background-color: var(--mediumTan)
 }
 
+.bubble {
+    background-color: var(--bubbleWhite);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 4% 5% 0 5%;
+}
+.headerContent {
+    display: flex;
+    background-color: var(--blackCoffee);
+    color: var(--bubbleWhite);
+    height: 100px;
+    border-radius: 0 0 10px 10px;
+}
+.businessName {
+    position: absolute;
+    top: 2%;
+    left: 12%;
+    font-family: "Style Script", cursive;
+    font-size: 2em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navLinks {
+    position: absolute;
+    top: 13%;
+    right: 2%;
+    list-style: none;
+    display: none; /*-flex hidden on mobile -flex on desktop */
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 16px;
+    background-color: var(--blackCoffee);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.navLinks li {
+    width: 100%;
+    background-color: var(--lessBlackCoffee);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 2px 6px;
+    box-shadow: 0 2px 3px #ffffff90;
+}
+.navLink {
+    color: var(--bubbleWhite);
+    text-decoration: none;
+    font-size: 1.2em;
+}
 #navLogo {
-    width: 80px;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 40px;
     height: auto;
     border-radius: 50%;
-    margin-top: 10px;
+    cursor: pointer;
+}
+.menuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    padding: 3px;
+    border-radius: 20%;
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    background-color: var(--lightTan);
+}
+.menuIcon span {
+    width: 34px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#menuToggle {
+    position: absolute;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    top: 6%;
+    right: 4%;
+    cursor: pointer;
+}
+#menuToggle:checked ~ .navLinks {
+    display: flex;
 }

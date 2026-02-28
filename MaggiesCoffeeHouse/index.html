@@ -14,22 +14,60 @@
     <meta property="og:description" content="Located in downtown Luverne, Alabama, Maggie's Coffee House offers fresh espresso, breakfast, lunch, pastries, smoothies and more!">
     <meta property="og:image" content="https://neonicc.github.io/MaggiesCoffeeHouse/assets/images/MaggiesAltLogo.svg"> <!--Update with actual image URL from netlify-->
 
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+
+
     <link rel="canonical" href="https://neonicc.github.io/MaggiesCoffeeHouse/"> <!--Update with actual URL from netlify-->
     <link rel="stylesheet" href="maggiesStyles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <img id="navLogo" src="assets/images/Logo.webp" alt="Maggies Coffee House Logo">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="headerContent">
+        <nav class="navBar">
+            <a href="index.html"><img src="assets/images/MaggiesLogo.svg" alt="Maggies Coffee House Logo" id="navLogo" class="logo"></a>
+
+            <h1 class="businessName">Maggies Coffee House</h1>
+
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menuIcon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="navLinks">
+                <li><a href="#home" class="navLink">Home</a></li>
+                <li><a href="#menu" class="navLink">Menu</a></li>
+                <li><a href="#events" class="navLink">Events</a></li>
+                <li><a href="#contact" class="navLink">Contact</a></li>
             </ul>
         </nav>
-        <h1>Maggies Coffee House</h1>
     </header>
+    <main>
+        <section id="homeSection" class="bubble">
+            <h2>Welcome to Maggie's Coffee House</h2>
+            <p>Located in downtown Luverne, Alabama, Maggie's Coffee House offers fresh espresso, breakfast, lunch, pastries, smoothies and more! We are committed to providing a cozy atmosphere and delicious food and drinks for our community.</p>
+        </section>
 
+        <section id="menu" class="menuSection">
+            <h2>Our Menu</h2>
+            <p>Explore our diverse menu featuring everything from classic espresso drinks to hearty breakfast sandwiches and fresh salads. We use high-quality ingredients to ensure every bite and sip is a delight.</p>
+        </section>
+
+        <section id="events" class="eventsSection">
+            <h2>Upcoming Events</h2>
+            <p>Join us for live music nights, coffee tastings, and community gatherings. Check back often for updates on our upcoming events!</p>
+        </section>
+
+        <section id="contact" class="contactSection">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to book an event? Reach out to us at (555) 123-4567 or email us at</p>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
